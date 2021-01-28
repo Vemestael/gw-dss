@@ -36,7 +36,7 @@ class ButtonHandler:
 
     @staticmethod
     def analyze_pressed(ui):
-        tables = [
+        predict_tables = [
             ui.predict_table_1,
             ui.predict_table_2,
             ui.predict_table_3,
@@ -45,15 +45,43 @@ class ButtonHandler:
             ui.predict_table_6,
             ui.predict_table_7
         ]
+        cost_tables = [
+            ui.cost_table_1,
+            ui.cost_table_2,
+            ui.cost_table_3,
+            ui.cost_table_4,
+            ui.cost_table_5,
+            ui.cost_table_6,
+            ui.cost_table_7
+        ]
         date_start = ui.date_start.date().toPyDate()
         date_end = ui.date_end.date().toPyDate()
         lambda_by_shift = InputData.get_count_of_calls_by_range(date_start, date_end)
         for i in range(len(lambda_by_shift)):
-            table = tables[i]
+            table = predict_tables[i]
+            cost_table = cost_tables[i]
             for j in range(len(lambda_by_shift[i])):
                 index = 1
-                predicts = Predict(range(1, 50), 20, lambda_by_shift[i][j], 1.5).get_predict()
+                predicts = Predict(range(1, 10), 20, lambda_by_shift[i][j], 12).get_predict()
+                # штук за час
+                # кол-во заявок за час - 50
+
+                # запросы
+                # avg кол-во заявок
+                # по времени
+
+                # цена по max обработанных заявок
+                # цена канала - 200 грн за час (можно привести к смене)
+                # цена обработка заявки = кол-во персонала/ кол-во обработанных заявок
+                # таблица 2 x 3: по вертикали - суммарная цена каналов, цена обработки заявки
+                # по горизонтале смены
                 for predict in predicts:
                     for characteristic in predict:
                         table.setItem(index, j + 2, QTableWidgetItem(characteristic))
                         index += 1
+
+                channel_cost = float(predicts[0][0]) * 200
+                request_cost = (float(predicts[0][0]) * 200) / float(predicts[0][1])
+                request_cost = round(request_cost, 4)
+                cost_table.setItem(1, j+1, QTableWidgetItem(str(channel_cost)))
+                cost_table.setItem(2, j+1, QTableWidgetItem(str(request_cost)))

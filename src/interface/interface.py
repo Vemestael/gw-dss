@@ -51,7 +51,7 @@ class Interface(QtWidgets.QMainWindow):
         self.ui.date_end.setDate(QDate(date.today()))
 
     def set_predict_table_headers(self):
-        tables = [
+        predict_tables = [
             self.ui.predict_table_1,
             self.ui.predict_table_2,
             self.ui.predict_table_3,
@@ -60,7 +60,16 @@ class Interface(QtWidgets.QMainWindow):
             self.ui.predict_table_6,
             self.ui.predict_table_7
         ]
-        for table in tables:
+        cost_tables = [
+            self.ui.cost_table_1,
+            self.ui.cost_table_2,
+            self.ui.cost_table_3,
+            self.ui.cost_table_4,
+            self.ui.cost_table_5,
+            self.ui.cost_table_6,
+            self.ui.cost_table_7
+        ]
+        for table in predict_tables:
             table.setSpan(0, 0, 1, 2)
             table.setSpan(1, 0, 3, 1)
             table.setSpan(4, 0, 3, 1)
@@ -83,6 +92,15 @@ class Interface(QtWidgets.QMainWindow):
             table.setItemDelegateForColumn(0, VerticalTextDelegate(self))
             table.setColumnWidth(0, 10)
             table.setColumnWidth(1, 160)
+
+        for table in cost_tables:
+            table.setItem(0, 1, QTableWidgetItem('Смена 1'))
+            table.setItem(0, 2, QTableWidgetItem('Смена 2'))
+            table.setItem(0, 3, QTableWidgetItem('Смена 3'))
+
+            table.setItem(1, 0, QTableWidgetItem('Стоимость персонала'))
+            table.setItem(2, 0, QTableWidgetItem('Стоимость заявки'))
+            table.setColumnWidth(0, 220)
 
     def button_handling(self):
         self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self.ui))
