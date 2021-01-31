@@ -278,424 +278,6 @@
      </item>
     </layout>
    </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>10</y>
-      <width>575</width>
-      <height>642</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Fira Sans</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Пн</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_1">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Вт</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_5">
-     <attribute name="title">
-      <string>Ср</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_6">
-     <attribute name="title">
-      <string>Чт</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_4">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_7">
-     <attribute name="title">
-      <string>Пт</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_5">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_8">
-     <attribute name="title">
-      <string>Сб</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_6">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_9">
-     <attribute name="title">
-      <string>Вс</string>
-     </attribute>
-     <widget class="QTableWidget" name="predict_table_7">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>575</width>
-        <height>610</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Sans</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>10</number>
-      </property>
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>125</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>60</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QWidget" name="horizontalLayoutWidget_7">
     <property name="geometry">
      <rect>
@@ -750,10 +332,10 @@
    <widget class="QTabWidget" name="tabWidget_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>520</y>
-      <width>525</width>
-      <height>132</height>
+      <x>740</x>
+      <y>10</y>
+      <width>565</width>
+      <height>678</height>
      </rect>
     </property>
     <property name="font">
@@ -762,275 +344,853 @@
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="tabPosition">
-     <enum>QTabWidget::North</enum>
-    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <property name="elideMode">
-     <enum>Qt::ElideNone</enum>
-    </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Пн</string>
+      <string>Прогнозы</string>
      </attribute>
-     <widget class="QTableWidget" name="cost_table_1">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
-        <width>531</width>
-        <height>181</height>
+        <width>575</width>
+        <height>640</height>
        </rect>
       </property>
-      <property name="rowCount">
-       <number>3</number>
+      <property name="font">
+       <font>
+        <family>Fira Sans</family>
+        <pointsize>16</pointsize>
+       </font>
       </property>
-      <property name="columnCount">
-       <number>4</number>
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Пн</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Вт</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Ср</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Чт</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Пт</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Сб</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Вс</string>
+       </attribute>
+       <widget class="QTableWidget" name="predict_table_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Вт</string>
+      <string>Стоимость</string>
      </attribute>
-     <widget class="QTableWidget" name="cost_table_2">
+     <widget class="QTabWidget" name="tabWidget_3">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
-        <width>531</width>
-        <height>181</height>
+        <width>575</width>
+        <height>640</height>
        </rect>
       </property>
-      <property name="rowCount">
-       <number>3</number>
+      <property name="font">
+       <font>
+        <family>Fira Sans</family>
+        <pointsize>16</pointsize>
+       </font>
       </property>
-      <property name="columnCount">
-       <number>4</number>
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_10">
-     <attribute name="title">
-      <string>Ср</string>
-     </attribute>
-     <widget class="QTableWidget" name="cost_table_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>531</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>3</number>
-      </property>
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_11">
-     <attribute name="title">
-      <string>Чт</string>
-     </attribute>
-     <widget class="QTableWidget" name="cost_table_4">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>531</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>3</number>
-      </property>
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_12">
-     <attribute name="title">
-      <string>Пт</string>
-     </attribute>
-     <widget class="QTableWidget" name="cost_table_5">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>531</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>3</number>
-      </property>
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_13">
-     <attribute name="title">
-      <string>Сб</string>
-     </attribute>
-     <widget class="QTableWidget" name="cost_table_6">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>531</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>3</number>
-      </property>
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_14">
-     <attribute name="title">
-      <string>Вс</string>
-     </attribute>
-     <widget class="QTableWidget" name="cost_table_7">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>531</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="rowCount">
-       <number>3</number>
-      </property>
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>30</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>Пн</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>Вт</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_12">
+       <attribute name="title">
+        <string>Ср</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_13">
+       <attribute name="title">
+        <string>Чт</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_14">
+       <attribute name="title">
+        <string>Пт</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_15">
+       <attribute name="title">
+        <string>Сб</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_16">
+       <attribute name="title">
+        <string>Вс</string>
+       </attribute>
+       <widget class="QTableWidget" name="cost_table_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>575</width>
+          <height>610</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Fira Sans</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>60</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </widget>
      </widget>
     </widget>
    </widget>

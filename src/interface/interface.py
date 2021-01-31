@@ -51,16 +51,14 @@ class Interface(QtWidgets.QMainWindow):
         self.ui.date_end.setDate(QDate(date.today()))
 
     def set_predict_table_headers(self):
-        predict_tables = [
+        tables = [
             self.ui.predict_table_1,
             self.ui.predict_table_2,
             self.ui.predict_table_3,
             self.ui.predict_table_4,
             self.ui.predict_table_5,
             self.ui.predict_table_6,
-            self.ui.predict_table_7
-        ]
-        cost_tables = [
+            self.ui.predict_table_7,
             self.ui.cost_table_1,
             self.ui.cost_table_2,
             self.ui.cost_table_3,
@@ -69,7 +67,7 @@ class Interface(QtWidgets.QMainWindow):
             self.ui.cost_table_6,
             self.ui.cost_table_7
         ]
-        for table in predict_tables:
+        for table in tables:
             table.setSpan(0, 0, 1, 2)
             table.setSpan(1, 0, 3, 1)
             table.setSpan(4, 0, 3, 1)
@@ -80,11 +78,15 @@ class Interface(QtWidgets.QMainWindow):
             table.setItem(0, 3, QTableWidgetItem('Смена 2'))
             table.setItem(0, 4, QTableWidgetItem('Смена 3'))
 
-            # vertical headers
-            for i in range(0, 10, 3):
-                table.setItem(i + 1, 1, QTableWidgetItem('Количество персонала'))
-                table.setItem(i + 2, 1, QTableWidgetItem('Обработанных заявок'))
-                table.setItem(i + 3, 1, QTableWidgetItem('Длина очереди'))
+            if 'predict_table' in table.objectName():
+                for i in range(0, 10, 3):
+                    table.setItem(i + 1, 1, QTableWidgetItem('Количество персонала'))
+                    table.setItem(i + 2, 1, QTableWidgetItem('Обработанных заявок'))
+                    table.setItem(i + 3, 1, QTableWidgetItem('Длина очереди'))
+            else:
+                for i in range(0, 10, 3):
+                    table.setItem(i + 1, 1, QTableWidgetItem('Стоимость персонала'))
+                    table.setItem(i + 2, 1, QTableWidgetItem('Стоимость заявки'))
             table.setItem(1, 0, QTableWidgetItem('Максимум заявок'))
             table.setItem(4, 0, QTableWidgetItem('Оптимально'))
             table.setItem(7, 0, QTableWidgetItem('Мин. очередь'))
@@ -92,15 +94,6 @@ class Interface(QtWidgets.QMainWindow):
             table.setItemDelegateForColumn(0, VerticalTextDelegate(self))
             table.setColumnWidth(0, 10)
             table.setColumnWidth(1, 160)
-
-        for table in cost_tables:
-            table.setItem(0, 1, QTableWidgetItem('Смена 1'))
-            table.setItem(0, 2, QTableWidgetItem('Смена 2'))
-            table.setItem(0, 3, QTableWidgetItem('Смена 3'))
-
-            table.setItem(1, 0, QTableWidgetItem('Стоимость персонала'))
-            table.setItem(2, 0, QTableWidgetItem('Стоимость заявки'))
-            table.setColumnWidth(0, 220)
 
     def button_handling(self):
         self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self.ui))

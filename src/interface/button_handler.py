@@ -63,25 +63,13 @@ class ButtonHandler:
             for j in range(len(lambda_by_shift[i])):
                 index = 1
                 predicts = Predict(range(1, 10), 20, lambda_by_shift[i][j], 12).get_predict()
-                # штук за час
-                # кол-во заявок за час - 50
-
-                # запросы
-                # avg кол-во заявок
-                # по времени
-
-                # цена по max обработанных заявок
-                # цена канала - 200 грн за час (можно привести к смене)
-                # цена обработка заявки = кол-во персонала/ кол-во обработанных заявок
-                # таблица 2 x 3: по вертикали - суммарная цена каналов, цена обработки заявки
-                # по горизонтале смены
                 for predict in predicts:
                     for characteristic in predict:
                         table.setItem(index, j + 2, QTableWidgetItem(characteristic))
                         index += 1
 
-                channel_cost = float(predicts[0][0]) * 200
-                request_cost = (float(predicts[0][0]) * 200) / float(predicts[0][1])
-                request_cost = round(request_cost, 4)
-                cost_table.setItem(1, j+1, QTableWidgetItem(str(channel_cost)))
-                cost_table.setItem(2, j+1, QTableWidgetItem(str(request_cost)))
+                    channel_cost = float(predict[0]) * 200
+                    request_cost = (float(predict[0]) * 200) / float(predict[1])
+                    request_cost = round(request_cost, 4)
+                    cost_table.setItem(index-3, j+2, QTableWidgetItem(str(channel_cost)))
+                    cost_table.setItem(index-2, j+2, QTableWidgetItem(str(request_cost)))
