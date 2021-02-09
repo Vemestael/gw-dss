@@ -1,45 +1,7 @@
-import datetime
+from database.models import CallTable, get_cursor
 
-from database.models import CallTable, PredictTable, get_cursor
 
 class DbApi:
-    @staticmethod
-    def add_new_predict(descriptor, channel_count, avg_count_of_served_requests, avg_queue_length):
-        PredictTable.create(
-            date=datetime.datetime.now(),
-            descriptor=descriptor,
-            channel_count=channel_count,
-            avg_count_of_served_requests=avg_count_of_served_requests,
-            avg_queue_length=avg_queue_length
-        )
-
-    @staticmethod
-    def get_last_predicts() -> dict:
-        query = PredictTable.select().limit(3).order_by(PredictTable.id.desc())
-        return query.dicts().execute()
-
-    @staticmethod
-    def get_predicts(limit=50) -> dict:
-        """limit - number of records(default = 50)"""
-        query = PredictTable.select().limit(limit).order_by(PredictTable.id.desc())
-        return query.dicts().execute()
-
-    @staticmethod
-    def update_predict(predict_id, _descriptor, _channel_count, _avg_count_of_served_requests, _avg_queue_length):
-        predict = PredictTable(id=predict_id)
-        predict.descriptor = _descriptor
-        predict.channel_count = _channel_count
-        predict.avg_count_of_served_requests = _avg_count_of_served_requests
-        predict.avg_queue_length = _avg_queue_length
-        predict.save()
-
-    @staticmethod
-    def delete_predicts(limit=1):
-        """limit - number of records(default = 1)"""
-        predict_id = DbApi.get_predicts(1)[0].get('id')
-        query = PredictTable.delete().where(PredictTable.id > predict_id - limit)
-        query.execute()
-
     @staticmethod
     def add_new_call(_date, _phone_number, _talk_time, _call_status):
         CallTable.create(

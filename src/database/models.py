@@ -29,16 +29,4 @@ class CallTable(BaseModel):
         table_name = 'Call_table'
 
 
-class PredictTable(BaseModel):
-    date = peewee.DateTimeField(column_name="date")
-    descriptor = peewee.TextField(column_name="descriptor")
-    channel_count = peewee.IntegerField(column_name="channel_count")
-    avg_count_of_served_requests = peewee.FloatField(
-        column_name="avg_count_of_served_requests")
-    avg_queue_length = peewee.FloatField(column_name="avg_queue_length")
-
-    class Meta:
-        table_name = 'Predict_table'
-
-
 connect.close()
