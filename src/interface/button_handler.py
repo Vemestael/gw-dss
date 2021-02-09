@@ -1,7 +1,7 @@
 from datetime import date
 
-from PyQt5.QtCore import QDate
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtCore import QDate, QSettings
+from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -35,7 +35,12 @@ class ButtonHandler:
         ui.date_start.setDate(QDate(now + relativedelta.relativedelta(months=-1)))
 
     @staticmethod
-    def analyze_pressed(ui):
+    def analyze_pressed(obj):
+        ui = obj.ui
+        settings = QSettings()
+        cost = float(settings.value('channel_cost', 0))
+        if not cost:
+            ButtonHandler.set_db_path_triggered(obj)
         predict_tables = [
             ui.predict_table_1,
             ui.predict_table_2,
@@ -68,8 +73,24 @@ class ButtonHandler:
                         table.setItem(index, j + 2, QTableWidgetItem(characteristic))
                         index += 1
 
-                    channel_cost = float(predict[0]) * 200
-                    request_cost = (float(predict[0]) * 200) / float(predict[1])
-                    request_cost = round(request_cost, 4)
-                    cost_table.setItem(index-3, j+2, QTableWidgetItem(str(channel_cost)))
-                    cost_table.setItem(index-2, j+2, QTableWidgetItem(str(request_cost)))
+                    channel_cost = float(predict[0]) * cost
+                    request_cost = (float(predict[0]) * cost) / float(predict[1])
+                    request_cost = round(request_cost, 2)
+                    cost_table.setItem(index - 3, j + 2, QTableWidgetItem(str(channel_cost)))
+                    cost_table.setItem(index - 2, j + 2, QTableWidgetItem(str(request_cost)))
+
+    @staticmethod
+    def set_db_path_triggered(obj):
+        db_path = QFileDialog.getOpenFileName(obj, 'Choose path to db')
+        DbApi.connect(db_path[0])
+        settings = QSettings()
+        settings.setValue('db_path', db_path[0])
+        settings.sync()
+
+    @staticmethod
+    def set_hourly_payment_triggered(obj):
+        cost, ok = QInputDialog.getDouble(obj, 'Стоимость в час', 'Введите стоимость часа работы персонала')
+        if ok:
+            settings = QSettings()
+            settings.setValue('channel_cost', cost)
+            settings.sync()

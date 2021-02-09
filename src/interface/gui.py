@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './src/interface/ui.ui'
+# Form implementation generated from reading ui file './src/interface/gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -420,12 +420,47 @@ class Ui_MainWindow(object):
         self.tabWidget_2.addTab(self.tab_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1325, 33))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1325, 37))
+        font = QtGui.QFont()
+        font.setFamily("Fira Sans")
+        font.setPointSize(16)
+        self.menubar.setFont(font)
         self.menubar.setObjectName("menubar")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        font = QtGui.QFont()
+        font.setFamily("Fira Sans")
+        font.setPointSize(16)
+        self.menu.setFont(font)
+        self.menu.setObjectName("menu")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.action_1 = QtWidgets.QAction(MainWindow)
+        font = QtGui.QFont()
+        font.setFamily("Fira Sans")
+        font.setPointSize(16)
+        self.action_1.setFont(font)
+        self.action_1.setObjectName("action_1")
+        self.action_2 = QtWidgets.QAction(MainWindow)
+        font = QtGui.QFont()
+        font.setFamily("Fira Sans")
+        font.setPointSize(16)
+        self.action_2.setFont(font)
+        self.action_2.setObjectName("action_2")
+        self.action_3 = QtWidgets.QAction(MainWindow)
+        self.action_3.setObjectName("action_3")
+        self.action_exit = QtWidgets.QAction(MainWindow)
+        font = QtGui.QFont()
+        font.setFamily("Fira Sans")
+        font.setPointSize(16)
+        self.action_exit.setFont(font)
+        self.action_exit.setObjectName("action_exit")
+        self.menu.addAction(self.action_1)
+        self.menu.addAction(self.action_2)
+        self.menu.addSeparator()
+        self.menu.addAction(self.action_exit)
+        self.menubar.addAction(self.menu.menuAction())
 
         self.retranslateUi(MainWindow)
         self.tabWidget_2.setCurrentIndex(0)
@@ -462,6 +497,11 @@ class Ui_MainWindow(object):
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_15), _translate("MainWindow", "Сб"))
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_16), _translate("MainWindow", "Вс"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_2), _translate("MainWindow", "Стоимость"))
+        self.menu.setTitle(_translate("MainWindow", "Меню"))
+        self.action_1.setText(_translate("MainWindow", "Путь к бд"))
+        self.action_2.setText(_translate("MainWindow", "Стоимость часа работы"))
+        self.action_3.setText(_translate("MainWindow", "выход"))
+        self.action_exit.setText(_translate("MainWindow", "Выход"))
 
 
 if __name__ == "__main__":

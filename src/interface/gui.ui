@@ -1201,11 +1201,71 @@
      <x>0</x>
      <y>0</y>
      <width>1325</width>
-     <height>33</height>
+     <height>37</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Fira Sans</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>Fira Sans</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="action_1"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_1">
+   <property name="text">
+    <string>Путь к бд</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Fira Sans</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Стоимость часа работы</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Fira Sans</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>выход</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Fira Sans</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

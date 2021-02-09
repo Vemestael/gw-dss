@@ -2,12 +2,13 @@ from datetime import date
 from functools import partial
 
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtCore import QDate, QSize
-from PyQt5.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem
+from PyQt5.QtCore import QDate, QSize, QSettings
+from PyQt5.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem, qApp
 from dateutil import relativedelta
 
+from database.db_api import DbApi
 from interface.button_handler import ButtonHandler
-from interface.ui import Ui_MainWindow
+from interface.gui import Ui_MainWindow
 
 
 class VerticalTextDelegate(QStyledItemDelegate):
@@ -41,6 +42,13 @@ class Interface(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.init_ui()
         self.button_handling()
+
+        settings = QSettings()
+        db_path = settings.value('db_path', '')
+        if db_path:
+            DbApi.connect(db_path)
+        else:
+            ButtonHandler.set_db_path_triggered(self)
 
     def init_ui(self):
         self.set_date()
@@ -96,9 +104,13 @@ class Interface(QtWidgets.QMainWindow):
             table.setColumnWidth(1, 160)
 
     def button_handling(self):
-        self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self.ui))
+        self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self))
         self.ui.all_time.clicked.connect(partial(ButtonHandler.all_time_pressed, self.ui))
         self.ui.last_year.clicked.connect(partial(ButtonHandler.last_year_pressed, self.ui))
         self.ui.last_6_month.clicked.connect(partial(ButtonHandler.last_6_month_pressed, self.ui))
         self.ui.last_3_month.clicked.connect(partial(ButtonHandler.last_3_month_pressed, self.ui))
         self.ui.last_month.clicked.connect(partial(ButtonHandler.last_month_pressed, self.ui))
+
+        self.ui.action_1.triggered.connect(partial(ButtonHandler.set_db_path_triggered, self))
+        self.ui.action_2.triggered.connect(partial(ButtonHandler.set_hourly_payment_triggered, self))
+        self.ui.action_exit.triggered.connect(qApp.quit)
