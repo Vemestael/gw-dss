@@ -1,4 +1,4 @@
-from src.core.core import SMO
+from core.core import SMO
 
 
 class Predict:

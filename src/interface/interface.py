@@ -6,8 +6,8 @@ from PyQt5.QtCore import QDate, QSize
 from PyQt5.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem
 from dateutil import relativedelta
 
-from src.interface.button_handler import ButtonHandler
-from src.interface.ui import Ui_MainWindow
+from interface.button_handler import ButtonHandler
+from interface.ui import Ui_MainWindow
 
 
 class VerticalTextDelegate(QStyledItemDelegate):

@@ -1,4 +1,4 @@
-import src.core.libqtmcalc as libqtmcalc
+import core.libqtmcalc as libqtmcalc
 
 
 class SMO:

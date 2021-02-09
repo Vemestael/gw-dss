@@ -4,9 +4,9 @@ from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QTableWidgetItem
 from dateutil import relativedelta
 
-from src.database.db_api import DbApi
-from src.dataprocessing.input_data import InputData
-from src.predict.predict import Predict
+from database.db_api import DbApi
+from dataprocessing.input_data import InputData
+from predict.predict import Predict
 
 
 class ButtonHandler:

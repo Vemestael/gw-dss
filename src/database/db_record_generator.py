@@ -1,6 +1,6 @@
 import datetime
 from random import randint
-from src.database.db_api import DbApi
+from database.db_api import DbApi
 
 
 def record_generator():

@@ -1,7 +1,6 @@
 import datetime
 
-from src.database.models import CallTable, PredictTable, get_cursor
-
+from database.models import CallTable, PredictTable, get_cursor
 
 class DbApi:
     @staticmethod

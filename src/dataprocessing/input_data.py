@@ -1,4 +1,4 @@
-from src.database.db_api import DbApi
+from database.db_api import DbApi
 
 
 class InputData:

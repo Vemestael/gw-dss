@@ -4,7 +4,7 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from src.interface.interface import Interface
+from interface.interface import Interface
 
 
 def main():
