@@ -32,8 +32,16 @@ class DbApi:
         cursor = DbApi.get_cursor()
         date_start = _date_start.strftime('%Y-%m-%d')
         date_end = _date_end.strftime('%Y-%m-%d')
-        day_count = DbApi.get_last_date() - DbApi.get_first_date()
+
+        last_date = DbApi.get_last_date()
+        first_date = DbApi.get_first_date()
+        if datetime.combine(_date_end, datetime.min.time()) < last_date:
+            last_date = datetime.combine(_date_end, datetime.min.time())
+        if datetime.combine(_date_start, datetime.min.time()) > first_date:
+            first_date = datetime.combine(_date_start, datetime.min.time())
+        day_count = last_date - first_date
         week_count = day_count.days // 7 if not day_count.days % 7 else day_count.days // 7 + 1
+
         # strftime - первый день недели - воскресенье
         query = f"""
                     select strftime('%w', date) WeekDayNumber,
