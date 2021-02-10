@@ -105,7 +105,8 @@ class Interface(QtWidgets.QMainWindow):
 
     def button_handling(self):
         self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self))
-        self.ui.all_time.clicked.connect(partial(ButtonHandler.all_time_pressed, self.ui))
+        self.ui.all_time.clicked.connect(partial(ButtonHandler.all_time_pressed, self))
+
         self.ui.last_year.clicked.connect(partial(ButtonHandler.last_year_pressed, self.ui))
         self.ui.last_6_month.clicked.connect(partial(ButtonHandler.last_6_month_pressed, self.ui))
         self.ui.last_3_month.clicked.connect(partial(ButtonHandler.last_3_month_pressed, self.ui))

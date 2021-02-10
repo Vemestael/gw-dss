@@ -1,7 +1,8 @@
 from datetime import date
+from functools import partial
 
 from PyQt5.QtCore import QDate, QSettings
-from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog
+from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QMessageBox, QPushButton
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -10,9 +11,26 @@ from predict.predict import Predict
 
 
 class ButtonHandler:
+    class ErrorDialog(QMessageBox):
+        def __init__(self, obj, e):
+            super().__init__()
+            self.setIcon(QMessageBox.Critical)
+            self.setWindowTitle('ERROR')
+            self.setText(str(e))
+            btn1 = QPushButton('Выбрать новый путь к бд')
+            btn1.clicked.connect(partial(ButtonHandler.set_db_path_triggered, obj))
+            self.addButton(btn1, QMessageBox.AcceptRole)
+            btn2 = QPushButton('Закрыть программу')
+            btn2.clicked.connect(obj.close)
+            self.addButton(btn2, QMessageBox.RejectRole)
+            self.exec()
+
     @staticmethod
-    def all_time_pressed(ui):
-        ui.date_start.setDate(QDate(DbApi.get_first_date()))
+    def all_time_pressed(obj):
+        try:
+            obj.ui.date_start.setDate(QDate(DbApi.get_first_date()))
+        except Exception as e:
+            ButtonHandler.ErrorDialog(obj, e)
 
     @staticmethod
     def last_year_pressed(ui):
@@ -61,31 +79,37 @@ class ButtonHandler:
         ]
         date_start = ui.date_start.date().toPyDate()
         date_end = ui.date_end.date().toPyDate()
-        lambda_by_shift = InputData.get_count_of_calls_by_range(date_start, date_end)
-        for i in range(len(lambda_by_shift)):
-            table = predict_tables[i]
-            cost_table = cost_tables[i]
-            for j in range(len(lambda_by_shift[i])):
-                index = 1
-                predicts = Predict(range(1, 10), 20, lambda_by_shift[i][j], 12).get_predict()
-                for predict in predicts:
-                    for characteristic in predict:
-                        table.setItem(index, j + 2, QTableWidgetItem(characteristic))
-                        index += 1
+        try:
+            lambda_by_shift = InputData.get_count_of_calls_by_range(date_start, date_end)
+            for i in range(len(lambda_by_shift)):
+                table = predict_tables[i]
+                cost_table = cost_tables[i]
+                for j in range(len(lambda_by_shift[i])):
+                    index = 1
+                    predicts = Predict(range(1, 10), 20, lambda_by_shift[i][j], 12).get_predict()
+                    for predict in predicts:
+                        for characteristic in predict:
+                            table.setItem(index, j + 2, QTableWidgetItem(characteristic))
+                            index += 1
 
-                    channel_cost = float(predict[0]) * cost
-                    request_cost = (float(predict[0]) * cost) / float(predict[1])
-                    request_cost = round(request_cost, 2)
-                    cost_table.setItem(index - 3, j + 2, QTableWidgetItem(str(channel_cost)))
-                    cost_table.setItem(index - 2, j + 2, QTableWidgetItem(str(request_cost)))
+                        channel_cost = float(predict[0]) * cost
+                        request_cost = (float(predict[0]) * cost) / float(predict[1])
+                        request_cost = round(request_cost, 2)
+                        cost_table.setItem(index - 3, j + 2, QTableWidgetItem(str(channel_cost)))
+                        cost_table.setItem(index - 2, j + 2, QTableWidgetItem(str(request_cost)))
+        except Exception as e:
+            ButtonHandler.ErrorDialog(obj, e)
 
     @staticmethod
     def set_db_path_triggered(obj):
-        db_path = QFileDialog.getOpenFileName(obj, 'Choose path to db')
-        DbApi.connect(db_path[0])
-        settings = QSettings()
-        settings.setValue('db_path', db_path[0])
-        settings.sync()
+        db_path = QFileDialog.getOpenFileName(obj, 'Choose path to db')[0]
+        if db_path:
+            if DbApi.conn:
+                DbApi.close()
+            DbApi.connect(db_path)
+            settings = QSettings()
+            settings.setValue('db_path', db_path)
+            settings.sync()
 
     @staticmethod
     def set_hourly_payment_triggered(obj):
