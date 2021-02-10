@@ -3,25 +3,24 @@ from datetime import datetime
 
 
 class DbApi:
-    connect = None
+    conn = None
 
     @staticmethod
     def connect(db_path):
-        print(db_path)
-        DbApi.connect = sqlite3.connect(db_path)
+        DbApi.conn = sqlite3.connect(db_path)
 
     @staticmethod
     def get_cursor():
-        return DbApi.connect.cursor()
+        return DbApi.conn.cursor()
 
     @staticmethod
     def close():
-        DbApi.connect.close()
+        DbApi.conn.close()
 
     @staticmethod
     def add_new_call(_date, _phone_number, _talk_time, _call_status):
         query = f"""
-                insert into Call_table(date, phone_number, talk_time, call_status)
+                insert into Call_table(date, phone_number, talk_time, status)
                 values ({_date}, {_phone_number}, {_talk_time}, {_call_status})
         """
 
@@ -60,4 +59,5 @@ class DbApi:
         """
 
         cursor.execute(query)
-        return datetime.strptime(cursor.fetchall()[0][0], '%Y-%m-%d %H:%M:%S')
+        return datetime.strptime(cursor.fetchall()[0][0][:-10], '%Y-%m-%d %H:%M:%S')
+        # [:-10] - срез точки и миллисекунд
