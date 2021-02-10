@@ -1,8 +1,9 @@
+import sqlite3
 from datetime import date
 from functools import partial
 
 from PyQt5.QtCore import QDate, QSettings
-from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QMessageBox, QPushButton
+from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -29,7 +30,7 @@ class ButtonHandler:
     def all_time_pressed(obj):
         try:
             obj.ui.date_start.setDate(QDate(DbApi.get_first_date()))
-        except Exception as e:
+        except sqlite3.Error as e:
             ButtonHandler.ErrorDialog(obj, e)
 
     @staticmethod
@@ -81,12 +82,14 @@ class ButtonHandler:
         date_end = ui.date_end.date().toPyDate()
         try:
             lambda_by_shift = InputData.get_count_of_calls_by_range(date_start, date_end)
+            if all(value == 0 for list_ in lambda_by_shift for value in list_):
+                raise Exception('Empty data set')
             for i in range(len(lambda_by_shift)):
                 table = predict_tables[i]
                 cost_table = cost_tables[i]
                 for j in range(len(lambda_by_shift[i])):
                     index = 1
-                    predicts = Predict(range(1, 10), 20, lambda_by_shift[i][j], 12).get_predict()
+                    predicts = Predict(range(1, 20), 20, lambda_by_shift[i][j], 12).get_predict()
                     for predict in predicts:
                         for characteristic in predict:
                             table.setItem(index, j + 2, QTableWidgetItem(characteristic))
@@ -97,8 +100,10 @@ class ButtonHandler:
                         request_cost = round(request_cost, 2)
                         cost_table.setItem(index - 3, j + 2, QTableWidgetItem(str(channel_cost)))
                         cost_table.setItem(index - 2, j + 2, QTableWidgetItem(str(request_cost)))
-        except Exception as e:
+        except sqlite3.Error as e:
             ButtonHandler.ErrorDialog(obj, e)
+        except Exception as e:
+            QErrorMessage(obj).showMessage(str(e))
 
     @staticmethod
     def set_db_path_triggered(obj):
