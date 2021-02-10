@@ -32,18 +32,16 @@ class DbApi:
         cursor = DbApi.get_cursor()
         date_start = _date_start.strftime('%Y-%m-%d')
         date_end = _date_end.strftime('%Y-%m-%d')
+        day_count = DbApi.get_last_date() - DbApi.get_first_date()
+        week_count = day_count.days // 7 if not day_count.days % 7 else day_count.days // 7 + 1
         # strftime - первый день недели - воскресенье
         query = f"""
-                    select strftime('%w', date) WeekNumber,
+                    select strftime('%w', date) WeekDayNumber,
                     strftime('%H', date) HourNumber,
-                    count(id)/(
-                        select DISTINCT
-                        cast((strftime('%d', '{date_end}') - strftime('%d', '{date_start}') + 1.0)/7.0 as int) * 1.
-                        from Call_table
-                    )
+                    count(id)/{week_count}
                     from Call_table
                     where (date BETWEEN '{date_start}' AND '{date_end}')
-                    group by WeekNumber, HourNumber
+                    group by WeekDayNumber, HourNumber
                     """
 
         cursor.execute(query)
@@ -56,6 +54,19 @@ class DbApi:
             select date
             from Call_table
             order by id limit 1
+        """
+
+        cursor.execute(query)
+        return datetime.strptime(cursor.fetchall()[0][0][:-10], '%Y-%m-%d %H:%M:%S')
+        # [:-10] - срез точки и миллисекунд
+
+    @staticmethod
+    def get_last_date():
+        cursor = DbApi.get_cursor()
+        query = f"""
+            select date
+            from Call_table
+            order by id desc limit 1
         """
 
         cursor.execute(query)
