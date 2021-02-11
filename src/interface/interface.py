@@ -104,6 +104,7 @@ class Interface(QtWidgets.QMainWindow):
             table.setColumnWidth(1, 160)
 
     def button_handling(self):
+        self.ui.analyze.setShortcut("Return")
         self.ui.analyze.clicked.connect(partial(ButtonHandler.analyze_pressed, self))
         self.ui.all_time.clicked.connect(partial(ButtonHandler.all_time_pressed, self))
 
