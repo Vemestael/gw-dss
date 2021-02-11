@@ -29,4 +29,5 @@ class InputData:
         for i in range(0, 21, 3):
             result.append(lambda_by_shift[i:i + 3])
 
+        result.append(result.pop(0))  # первый день недели понедельник
         return result
