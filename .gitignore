@@ -262,3 +262,4 @@ pip-selfcheck.json
 *.db
 *.sqlite
 debuginfo
+*.conf
