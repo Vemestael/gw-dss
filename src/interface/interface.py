@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionV
 from dateutil import relativedelta
 
 from database.db_api import DbApi
+from easysettings import EasySettings
 from interface.button_handler import ButtonHandler
 from interface.gui import Ui_MainWindow
 
@@ -43,8 +44,8 @@ class Interface(QtWidgets.QMainWindow):
         self.init_ui()
         self.button_handling()
 
-        settings = QSettings()
-        db_path = settings.value('db_path', '')
+        settings = EasySettings(".conf")
+        db_path = settings.get('db_path', '')
         if db_path:
             DbApi.connect(db_path)
         else:

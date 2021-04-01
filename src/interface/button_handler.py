@@ -2,12 +2,13 @@ import sqlite3
 from datetime import date
 from functools import partial
 
-from PyQt5.QtCore import QDate, QSettings
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton
 from dateutil import relativedelta
 
 from database.db_api import DbApi
 from dataprocessing.input_data import InputData
+from easysettings import EasySettings
 from predict.predict import Predict
 
 
@@ -56,10 +57,10 @@ class ButtonHandler:
     @staticmethod
     def analyze_pressed(obj):
         ui = obj.ui
-        settings = QSettings()
-        cost = float(settings.value('channel_cost', 0))
+        settings = EasySettings(".conf")
+        cost = settings.get('channel_cost', 0)
         if not cost:
-            ButtonHandler.set_db_path_triggered(obj)
+            ButtonHandler.set_hourly_payment_triggered(obj)
         predict_tables = [
             ui.predict_table_1,
             ui.predict_table_2,
@@ -112,14 +113,14 @@ class ButtonHandler:
             if DbApi.conn:
                 DbApi.close()
             DbApi.connect(db_path)
-            settings = QSettings()
-            settings.setValue('db_path', db_path)
-            settings.sync()
+            settings = EasySettings(".conf")
+            settings.set('db_path', db_path)
+            settings.save()
 
     @staticmethod
     def set_hourly_payment_triggered(obj):
         cost, ok = QInputDialog.getDouble(obj, 'Стоимость в час', 'Введите стоимость часа работы персонала')
         if ok:
-            settings = QSettings()
-            settings.setValue('channel_cost', cost)
-            settings.sync()
+            settings = EasySettings(".conf")
+            settings.set('channel_cost', cost)
+            settings.save()

@@ -3,3 +3,4 @@ PyQt5-sip==12.8.1
 PyQt5-stubs==5.14.2.2
 python-dateutil==2.8.1
 six==1.15.0
+EasySettings==4.0.0
