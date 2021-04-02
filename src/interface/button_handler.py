@@ -2,8 +2,8 @@ import sqlite3
 from datetime import date
 from functools import partial
 
-from PyQt5.QtCore import QDate
-from PyQt5.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton
+from PySide6.QtCore import QDate
+from PySide6.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -79,8 +79,8 @@ class ButtonHandler:
             ui.cost_table_6,
             ui.cost_table_7
         ]
-        date_start = ui.date_start.date().toPyDate()
-        date_end = ui.date_end.date().toPyDate()
+        date_start = ui.date_start.date().toPython()
+        date_end = ui.date_end.date().toPython()
         try:
             lambda_by_shift = InputData.get_count_of_calls_by_range(date_start, date_end)
             if all(value == 0 for list_ in lambda_by_shift for value in list_):

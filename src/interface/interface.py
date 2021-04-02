@@ -1,9 +1,9 @@
 from datetime import date
 from functools import partial
 
-from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtCore import QDate, QSize, QSettings
-from PyQt5.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem, qApp
+from PySide6 import QtWidgets, QtCore
+from PySide6.QtCore import QDate, QSize, QSettings
+from PySide6.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem, QApplication
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -116,4 +116,4 @@ class Interface(QtWidgets.QMainWindow):
 
         self.ui.action_1.triggered.connect(partial(ButtonHandler.set_db_path_triggered, self))
         self.ui.action_2.triggered.connect(partial(ButtonHandler.set_hourly_payment_triggered, self))
-        self.ui.action_exit.triggered.connect(qApp.quit)
+        self.ui.action_exit.triggered.connect(QApplication.quit)
