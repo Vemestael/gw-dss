@@ -263,3 +263,4 @@ pip-selfcheck.json
 *.sqlite
 debuginfo
 *.conf
+*.qm
