@@ -2,8 +2,9 @@ import sqlite3
 from datetime import date
 from functools import partial
 
-from PySide6.QtCore import QDate
-from PySide6.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton
+from PySide6.QtCore import QDate, QTranslator
+from PySide6.QtWidgets import QTableWidgetItem, QFileDialog, QInputDialog, QErrorMessage, QMessageBox, QPushButton, \
+    QApplication
 from dateutil import relativedelta
 
 from database.db_api import DbApi
@@ -123,4 +124,20 @@ class ButtonHandler:
         if ok:
             settings = EasySettings(".conf")
             settings.set('channel_cost', cost)
+            settings.save()
+
+    @staticmethod
+    def switch_lang(obj, lang):
+        translator = QTranslator()
+        translator.load(f"gw-dss_{lang}", "./interface/translation/")
+
+        if not QApplication.installTranslator(translator):
+            msg = QErrorMessage(obj)
+            msg.setWindowTitle('Error')
+            msg.showMessage('Unable to install language')
+        else:
+            obj.ui.retranslateUi(obj)
+
+            settings = EasySettings(".conf")
+            settings.set('lang', lang)
             settings.save()

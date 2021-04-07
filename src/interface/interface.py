@@ -1,8 +1,8 @@
 from datetime import date
 from functools import partial
 
-from PySide6 import QtWidgets, QtCore
-from PySide6.QtCore import QDate, QSize, QSettings
+from PySide6 import QtWidgets
+from PySide6.QtCore import QDate, QSize, QPointF, QRectF
 from PySide6.QtWidgets import QTableWidgetItem, QStyledItemDelegate, QStyleOptionViewItem, QApplication
 from dateutil import relativedelta
 
@@ -18,7 +18,7 @@ class VerticalTextDelegate(QStyledItemDelegate):
 
     def paint(self, painter, option, index):
         option_copy = QStyleOptionViewItem(option)
-        rect_center = QtCore.QPointF(QtCore.QRectF(option.rect).center())
+        rect_center = QPointF(QRectF(option.rect).center())
         painter.save()
         painter.translate(rect_center.x(), rect_center.y())
         painter.rotate(-90.0)
@@ -45,7 +45,8 @@ class Interface(QtWidgets.QMainWindow):
         self.button_handling()
 
         settings = EasySettings(".conf")
-        db_path = settings.get('db_path', '')
+        ButtonHandler.switch_lang(self, settings.get('lang', "ru"))
+        db_path = settings.get('db_path', "")
         if db_path:
             DbApi.connect(db_path)
         else:
@@ -83,10 +84,9 @@ class Interface(QtWidgets.QMainWindow):
             table.setSpan(7, 0, 3, 1)
 
             # horizontal headers
-            table.setItem(0, 2, QTableWidgetItem('Смена 1'))
+            table.setItem(0, 2, QTableWidgetItem(self.tr("Смена 1")))
             table.setItem(0, 3, QTableWidgetItem('Смена 2'))
             table.setItem(0, 4, QTableWidgetItem('Смена 3'))
-
             if 'predict_table' in table.objectName():
                 for i in range(0, 10, 3):
                     table.setItem(i + 1, 1, QTableWidgetItem('Количество персонала'))
@@ -117,3 +117,7 @@ class Interface(QtWidgets.QMainWindow):
         self.ui.action_1.triggered.connect(partial(ButtonHandler.set_db_path_triggered, self))
         self.ui.action_2.triggered.connect(partial(ButtonHandler.set_hourly_payment_triggered, self))
         self.ui.action_exit.triggered.connect(QApplication.quit)
+
+        self.ui.en_lang.triggered.connect(partial(ButtonHandler.switch_lang, self, "en"))
+        self.ui.uk_lang.triggered.connect(partial(ButtonHandler.switch_lang, self, "uk"))
+        self.ui.ru_lang.triggered.connect(partial(ButtonHandler.switch_lang, self, "ru"))

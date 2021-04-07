@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1325</width>
+    <width>1350</width>
     <height>800</height>
    </rect>
   </property>
@@ -23,12 +23,17 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="all_time">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -41,7 +46,7 @@
       <widget class="QPushButton" name="last_year">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -61,9 +66,19 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <spacer name="horizontalSpacer">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -79,7 +94,7 @@
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -90,6 +105,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_2">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -112,9 +132,19 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
       <spacer name="horizontalSpacer_3">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -130,9 +160,8 @@
       <widget class="QLabel" name="label_5">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -143,6 +172,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_4">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -165,12 +199,17 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -183,7 +222,7 @@
       <widget class="QDateEdit" name="date_start">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -193,7 +232,7 @@
       <widget class="QLabel" name="label_3">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -206,7 +245,7 @@
       <widget class="QDateEdit" name="date_end">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -214,13 +253,18 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_5">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
-         <height>20</height>
+         <width>0</width>
+         <height>0</height>
         </size>
        </property>
       </spacer>
@@ -236,9 +280,19 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <spacer name="horizontalSpacer_6">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -254,7 +308,7 @@
       <widget class="QPushButton" name="analyze">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -265,6 +319,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_7">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -287,12 +346,17 @@
       <height>80</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QPushButton" name="last_6_month">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -305,7 +369,7 @@
       <widget class="QPushButton" name="last_3_month">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -318,7 +382,7 @@
       <widget class="QPushButton" name="last_month">
        <property name="font">
         <font>
-         <family>Fira Sans</family>
+         <family>Times New Roman</family>
          <pointsize>16</pointsize>
         </font>
        </property>
@@ -334,13 +398,13 @@
      <rect>
       <x>740</x>
       <y>10</y>
-      <width>565</width>
-      <height>678</height>
+      <width>590</width>
+      <height>670</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Fira Sans</family>
+      <family>Times New Roman</family>
       <pointsize>16</pointsize>
      </font>
     </property>
@@ -356,13 +420,13 @@
        <rect>
         <x>-10</x>
         <y>0</y>
-        <width>575</width>
+        <width>595</width>
         <height>640</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Fira Sans</family>
+        <family>Times New Roman</family>
         <pointsize>16</pointsize>
        </font>
       </property>
@@ -378,13 +442,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -435,13 +499,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -492,13 +556,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -549,13 +613,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -606,13 +670,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -663,13 +727,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -720,13 +784,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -779,13 +843,13 @@
        <rect>
         <x>-10</x>
         <y>0</y>
-        <width>575</width>
+        <width>595</width>
         <height>640</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Fira Sans</family>
+        <family>Times New Roman</family>
         <pointsize>16</pointsize>
        </font>
       </property>
@@ -801,13 +865,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -858,13 +922,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -915,13 +979,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -972,13 +1036,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -1029,13 +1093,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -1086,13 +1150,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -1143,13 +1207,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>575</width>
+          <width>600</width>
           <height>610</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Fira Sans</family>
+          <family>Times New Roman</family>
           <pointsize>16</pointsize>
          </font>
         </property>
@@ -1200,8 +1264,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1325</width>
-     <height>37</height>
+     <width>1350</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="font">
@@ -1225,7 +1289,16 @@
     <addaction name="separator"/>
     <addaction name="action_exit"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Язык</string>
+    </property>
+    <addaction name="en_lang"/>
+    <addaction name="uk_lang"/>
+    <addaction name="ru_lang"/>
+   </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_1">
@@ -1234,7 +1307,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Fira Sans</family>
+     <family>Times New Roman</family>
      <pointsize>16</pointsize>
     </font>
    </property>
@@ -1245,7 +1318,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Fira Sans</family>
+     <family>Times New Roman</family>
      <pointsize>16</pointsize>
     </font>
    </property>
@@ -1261,7 +1334,40 @@
    </property>
    <property name="font">
     <font>
-     <family>Fira Sans</family>
+     <family>Times New Roman</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="en_lang">
+   <property name="text">
+    <string>English</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="uk_lang">
+   <property name="text">
+    <string>Українська</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ru_lang">
+   <property name="text">
+    <string>Русский</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
      <pointsize>16</pointsize>
     </font>
    </property>
